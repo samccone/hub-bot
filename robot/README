@@ -1,0 +1,27 @@
+robot
+---------------------------------------
+
+Robot is in the early stages of life. 🍕
+
+
+Talking to the robot
+---------------------------------------
+
+Posting to <myserver.com>/action with a request body of:
+
+{
+  actions: {
+    comment: {
+      issue: <number>,
+      repo: <owner/repo-name>,
+      body: <your-message>
+    }
+  }
+}
+
+
+Working on the robot
+---------------------------------------
+
+* npm i
+* npm run dev
