@@ -10,12 +10,17 @@ Talking to the robot
 Posting to <myserver.com>/action with a request body of:
 
 {
+  issue: <number>,
+  repo: <owner/repo-name>.
   actions: {
-    comment: {
-      issue: <number>,
-      repo: <owner/repo-name>,
-      body: <your-message>
-    }
+    comments: [
+      '<your-message>',
+    ],
+    inlineComments: [{
+      file: '<file/path.txt>',
+      line: '<line-number>',
+      body: '<your-message>'
+    }]
   }
 }
 

@@ -8,6 +8,7 @@
     "request": "^2.67.0"
   },
   "devDependencies": {
+    "jsdoc": "^3.4.0",
     "supervisor": "^0.9.1"
   }
 }
