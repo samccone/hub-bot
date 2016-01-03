@@ -1,17 +1,17 @@
+const AGENT = 'hub-bot';
 var request = require('request');
 
 /**
  * @private
  * @param {string} url
- * @param {string} agent
  * @returns {Promise}
  */
-function get(url, agent) {
+function get(url) {
   var p = Promise.defer();
 
   request(url, {
     headers: {
-      'User-Agent': agent,
+      'User-Agent': AGENT,
       'Accept': 'application/vnd.github.v3+json',
     }
   }, function(err, _, body) {
@@ -28,22 +28,20 @@ function get(url, agent) {
 /**
  * @private
  * @param {string} url
- * @param {string} agent
  * @param {Object} json The json to post
  * @returns {Promise}
  */
-function post(url, agent, json) {
+function post(url, json) {
   var p = Promise.defer();
 
   request(url, {
     method: 'POST',
     headers: {
-      'User-Agent': agent,
+      'User-Agent': AGENT,
       'Accept': 'application/vnd.github.v3+json',
     },
     json: json,
   }, function(err, _, body) {
-    console.log(body);
     if (err) {
       p.reject(err);
     } else {
