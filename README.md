@@ -6,6 +6,7 @@ There is this rise in github bots, however they each kinda exist in a void betwe
 * https://github.com/facebook/mention-bot
 * https://github.com/Bernardstanislas/eslint-bot
 * https://github.com/markstory/lint-review
+* https://github.com/ampsauce
 
 It would be great to have a "tap" kind of output on ci that you could post to a bot... and the bot would read the "tap" format and take the correct action on a PR / Issue
 
